@@ -8,8 +8,8 @@
 # de dejar registro (log.txt) en un archivo de texto.
 
 def solicitar_datos():
-    usuario = input('Ingresa el usuario: ')
-    contraseña = input('Ingresa la contraseña: ')
+    usuario = input('Ingresa el usuario: ').lower()
+    contraseña = int(input('Ingresa la contraseña: '))
     return usuario, contraseña
 
 def ingreso():
@@ -17,6 +17,7 @@ def ingreso():
     intentos_restantes = 4
     if usuario == 'pepe' and contraseña == 123456789:
         print('Ingreso a la app.')
+        pass
     elif usuario == 'pepe':
         while intentos_restantes > 1:
             intentos_restantes -= 1
@@ -24,8 +25,9 @@ def ingreso():
             contraseña = input('Ingresa la contraseña nuevamente: ')
             if contraseña == '123456789':
                 print('Ingreso a la app.')
-        else: 
-            print('Cuenta bloqueada.')
+                break
+            else: 
+                print('Cuenta bloqueada.')
     else:
         print('Usuario no reconocido.')
 
