@@ -1,5 +1,7 @@
 #Bienvenida Usuario
-#Importar módulos ValidarUsuario, ValidarContraseña y Registrar
+
+import ingreso
+from Funcion_registrar_usuario import registrar_usuario
 
 
 print("TE DOY LA BIENVENIDA A NUESTRO SISTEMA")
@@ -16,15 +18,12 @@ while  salir==False:
     opcion=input("Ingrese una opción")
 
     if opcion == "1":
-        usuario=input("INGRESAR USUARIO: ")
-        print("validarUsuario(usuario)")
-        contrasena=input("INGRESA CONTRASEÑA: ")
-        print("validarContrasena(contraseña)")
-        print("olvidoContrasena())")
+        ingreso()
     elif opcion== "2":
-        print("registrar()")
+        registrar_usuario()
     elif opcion== "3":
-        print("saliendo")
+        
+        print("SALIENDO")
         salir=True
     else:
         print("Opción incorrecta, vuelve a intentar")
