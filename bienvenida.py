@@ -1,13 +1,11 @@
 #Bienvenida Usuario
 
-import ingreso
+from ingreso import ingreso
 from Funcion_registrar_usuario import registrar_usuario
 
+salir=False
 
 print("TE DOY LA BIENVENIDA A NUESTRO SISTEMA")
-
-
-salir=False
 
 while  salir==False:
     print("MENU")
@@ -15,7 +13,7 @@ while  salir==False:
     print("2- REGISTRAR USUARIO")
     print("3- SALIR")
 
-    opcion=input("Ingrese una opción")
+    opcion=input("Ingrese una opción: ")
 
     if opcion == "1":
         ingreso()
