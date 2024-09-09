@@ -1,26 +1,3 @@
-""" sumar: Suma de dos número reales (float), recibe dos números y
-devuelve la suma de los mismos
-b. restar: Resta de dos número reales (float), recibe dos números y
-devuelve la resta del primer número menos el segundo
-c. dividir: División de dos números reales (float), recibe dos números
-y devuelve el resultado de dividir el primer número por el segundo.
-i. Nota: Aquí considerar en la división el caso de división por
-cero y hacer un manejo de excepción.
-d. multiplicar: Multiplicación de dos números reales (float), recibe
-dos números y devuelve el resultado de multiplicarlos entre sí.
-e. sumar_n: Suma de n número reales (float), recibe una cantidad
-variable de números y devuelve la suma de los mismos
-f. promedio_n: Promedio de n número reales (float), recibe una
-cantidad variable de números y devuelve el valor promedio de los
-mismos
-g. Nota:
-i. todas las funciones deberán retornar un número flotante con
-dos números decimales.
-ii. se deberán hacer los controles (manejo de errores y
-aserciones) que se consideren necesarios y hagan robusto a la
-aplicación
-""" #para no repetir codigo ver de poner una funcion operaciones  
-    #
 def control_numeros(numero1,numero2):
     assert isinstance(numero1, (int, float)), "El primer argumento debe ser un número"
     assert isinstance(numero2, (int, float)), "El segundo argumento debe ser un número"
@@ -64,14 +41,25 @@ def promedio(*numeros):
     except Exception as error:
         print(f"Error al calcular el promedio: {error}")
         return None
+
+def suma_numeros(*numeros):
+    try:
+        assert all(isinstance(numero, (int, float)) for numero in numeros),\
+       "Todos los argumentos deben ser números enteros o flotantes"
+        
+        resultado = sum(numeros)
+        return resultado
+    except Exception as error:
+        print(f"Error al calcular la suma de n numeros: {error}")
+        return None
  #prueba si funciona
 
-"""if __name__ == "__main__":
+if __name__ == "__main__":
     
     print("Suma:", sumar(3.50, 2.73))
     print("Resta:", restar(3.55, 2.78))
     print("División:", dividir(3.52, 2.74))
     print("Multiplicación:", multiplicar(3.53, 2.79))
-    print("Promedio de n números:", promedio(9.50, 8.25, 3.80))"""
-
+    print("Promedio de n números:", promedio(9.50, 8.25, 3.80))
+    print("suma de n números:", suma_numeros(9.00, 8.00, 3.80))
     

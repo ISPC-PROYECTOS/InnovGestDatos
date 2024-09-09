@@ -1,12 +1,3 @@
-# Si ingresa correctamente dejar un mensaje de ingreso a la aplicación y (si
-# vemos archivos de texto) guardar en un archivo llamado “ingresos.txt” el
-# nombre de usuario y la fecha de ingreso.
-
-# Si el nombreUsuario es correcto y la clave no, la aplicación deberá ir
-# avisando de los intentos fallidos y recordando que al cuarto intento se
-# bloquea el acceso a dicho usuario, además * (si vemos archivos de texto)
-# de dejar registro (log.txt) en un archivo de texto.
-
 def solicitar_datos():
     usuario = input('Ingresa el usuario: ').lower()
     contraseña = int(input('Ingresa la contraseña: '))
@@ -16,6 +7,7 @@ def ingreso():
     usuario, contraseña = solicitar_datos()  
     intentos_restantes = 4
     if usuario == 'pepe' and contraseña == 123456789:
+        
         print('Ingreso a la app.')
         pass
     elif usuario == 'pepe':
@@ -26,10 +18,7 @@ def ingreso():
             if contraseña == '123456789':
                 print('Ingreso a la app.')
                 break
-            else: 
+        else: 
                 print('Cuenta bloqueada.')
     else:
         print('Usuario no reconocido.')
-
-if __name__ == '__main__':
-    ingreso()

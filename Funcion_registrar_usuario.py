@@ -1,5 +1,5 @@
-
 import re
+from Captcha import  comprobar_captcha
 
 def validar_clave(clave):
     if len(clave) < 8:
@@ -17,7 +17,6 @@ def validar_clave(clave):
         return True, "La clave es válida."
     else:
         return False, "La clave debe cumplir al menos 2 de las siguientes condiciones: minúscula, mayúscula, número, caracter especial."
-# Diccionario que arme mari?
 usuarios = {}
 
 
@@ -32,7 +31,7 @@ def registrar_usuario():
         else:
             break
     
-    correo = input("Ingrese su correo electrónico: ")
+    correo = input ("Ingrese su correo electrónico: ")
     fecha_nacimiento = input("Ingrese su fecha de nacimiento (YYYY-MM-DD): ")
     
     while True:
@@ -61,13 +60,14 @@ def registrar_usuario():
         "clave": clave
     }
     
-    print("Usuario registrado con éxito.")
+    
 
 
 registrar_usuario()
+comprobar_captcha()
 
 
-print("Usuarios registrados:")
+print("Usuario registrado con éxito:")
 for dni, info in usuarios.items():
     print(f"DNI: {dni}, Nombre: {info['nombre']}, Nombre de Usuario: {info['nombreUsuario']}")
     

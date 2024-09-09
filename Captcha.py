@@ -1,14 +1,15 @@
 #Captcha
+#Captcha
 import random
 
-from aritmetica import sumar, restar, multiplicar, dividir, promedio
+from aritmetica import sumar, restar, multiplicar, dividir, promedio, suma_numeros
 
 def generate_captcha():
     numero1 = round(random.uniform(1, 10),2)
     numero2 = round(random.uniform(1, 10),2)
-    operacion = random.choice(["+", "-","*" , "/", "prom"]) #elige una operacion de la lista al azar
+    operacion = random.choice (["+", "-","*" , "/", "prom","suma"]) #elige una operacion de la lista al azar
 
-    print(f"Por favor realiza esta operacion para comprobar que sos humano: {numero1} {operacion} {numero2}")   
+      
     if operacion == "+":
         resultado = sumar(numero1, numero2)
     elif operacion == "-":
@@ -24,6 +25,18 @@ def generate_captcha():
     
         
     return captcha_text, resultado
+
+def comprobar_captcha():
+    captcha_text, resultado = generate_captcha()
+    print(f"Resuelve esta operación si eres humano: {captcha_text}")
+
+    respuesta = float(input("Ingrese el resultado del captcha: "))
+
+    if respuesta == resultado:
+        print("Captcha correcto")
+    else:
+        print("Captcha incorrecto")
+"""    
 if __name__ == "__main__":
     
     captcha, resultado = generate_captcha()
@@ -36,4 +49,6 @@ if __name__ == "__main__":
         print("Captcha correcto")
     else:
         print("Captcha incorrecto")
+        
+        print(f"Por favor realiza esta operacion para comprobar que sos humano: {numero1} {operacion} {numero2}") """
 
