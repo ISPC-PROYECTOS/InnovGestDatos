@@ -1,8 +1,8 @@
 # Acceso.py
-from Usuario import Usuario
+from usuario import Usuario
 from datetime import datetime
 
-class Acceso1: 
+class Acceso: 
     def __init__(self, usuarioLogueado):
         self.id_acceso = None
         self.fecha_ingreso = None
@@ -34,7 +34,7 @@ class Acceso1:
 # Prueba
 usuario1 = Usuario("3465878", "jesivaldi", "jesivaldi@gmail.com", "contraseña")
 
-acceso = Acceso1(usuario1)
+acceso = Acceso(usuario1)
 
 email = input("Ingrese su email: ")
 contrasena = input("Ingrese su contraseña: ")

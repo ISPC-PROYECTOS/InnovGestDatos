@@ -1,5 +1,5 @@
 #from manejo_archivos import cargar_usuarios
-from Acceso1 import Acceso1
+from acceso import Acceso
 
 def iniciar_sesion():
     email = input("Ingrese su email: ")
@@ -8,7 +8,7 @@ def iniciar_sesion():
     usuarios = cargar_usuarios() #usar 
     for usuario in usuarios:
         if usuario.get_email() == email:
-            acceso = Acceso1(usuario)
+            acceso = Acceso(usuario)
             if acceso.login(email, contrasena):
                 print("Inicio de sesión exitoso")
                 return acceso
