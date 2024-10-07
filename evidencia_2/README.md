@@ -28,9 +28,9 @@ El proyecto está compuesto por los siguientes archivos:
 2. Abrir una terminal y buscar la carpeta donde se encuentran los archivos.
 3. Ejecutar el archivo `main.py`
 
-## ## ¿Cuales son los pasos para Probar el Programa?
+## ¿Cuales son los pasos para Probar el Programa?
 
-Las opciones que se encontramos en el programa al momento de ejecutarlo son:
+Las opciones que encontramos en el programa al momento de ejecutarlo son:
 
 1. **Acceder al Menú Principal**:
    - Al iniciar, está el menú principal donde se encuentran 3 opciones que incluyen CRUD ,iniciar sesión o salir
