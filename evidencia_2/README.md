@@ -21,7 +21,7 @@ El proyecto está compuesto por los siguientes archivos:
 - **modulos_main.py**: Define los menús que se muestran al usuario.
 - **usuario.py**: Define la clase Usuario con los atributos y métodos necesarios.
 - **validaciones.py**: Contiene funciones para validar la entrada de datos del usuario.
-- 
+  
 ## ¿Cómo Ejecutar el Programa?
 
 1. Clonar el repositorio o descargar los archivos del proyecto.
