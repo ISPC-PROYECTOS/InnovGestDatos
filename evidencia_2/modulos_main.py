@@ -1,7 +1,7 @@
 def menu_pricipal():
     print('-----> MENÚ PRINCIPAL <-----')
     print('1. CRUD')
-    print('2. INCIAR SESIÓN')
+    print('2. INICIAR SESIÓN')
     print('3. SALIR')
 
 def menu_crud():

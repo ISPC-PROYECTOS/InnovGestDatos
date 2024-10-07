@@ -1,12 +1,12 @@
 class Usuario:
-    def __init__(self, id_usuario, username, email, contrasena):
-        self.__id_usuario = id_usuario
+    def __init__(self, dni, username, email, contrasena):
+        self.__dni = dni
         self.__username = username
         self.__email = email
         self.__contrasena = contrasena
 
-    def get_id_usuario(self):
-        return self.__id_usuario
+    def get_dni(self):
+        return self.__dni
     
     def get_username(self):
         return self.__username
@@ -27,8 +27,7 @@ class Usuario:
         return self.__contrasena
 
     def mostrar_datos(self):
-        return f"identificador unico de usuario: {self.__id_usuario}, Nombre de usuario: {self.__username}, email: {self.__email}"
-
+        return f"DNI: {self.__dni}, Usuario: {self.__username}, Email: {self.__email}"
 
 
     

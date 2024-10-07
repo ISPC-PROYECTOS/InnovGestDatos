@@ -1,4 +1,6 @@
 from modulos_main import menu_pricipal, menu_crud
+from funciones_main import agregar_usuario, modificar_usuario, eliminar_usuario, buscar_usuario, mostrar_usuarios
+from inicio_sesion import iniciar_sesion
 
 def main():
     salir = False
@@ -11,27 +13,21 @@ def main():
                 menu_crud()
                 opcion_2 = int(input('Ingrese la opción: '))
                 if opcion_2 == 1:
-                    print("Agregar usuario")
-                    # Implementar función para agregar usuario
+                    agregar_usuario()  
                 elif opcion_2 == 2:
-                    print("Modificar usuario")
-                    # Implementar función para modificar usuario
+                    modificar_usuario()
                 elif opcion_2 == 3:
-                    print("Eliminar usuario")
-                    # Implementar función para eliminar usuario
+                    eliminar_usuario()
                 elif opcion_2 == 4:
-                    print("Buscar usuario")
-                    # Implementar función para buscar usuario
+                    buscar_usuario()
                 elif opcion_2 == 5:
-                    print("Mostrar usuarios")
-                    # Implementar función para mostrar usuarios
+                    mostrar_usuarios()
                 elif opcion_2 == 6:
                     break
                 else:
                     print('Opción incorrecta, volvé a ingresarla.')
         elif opcion_1 == 2:
-            print("Iniciar sesión")
-            # Implementar función para iniciar sesión
+            iniciar_sesion()
         elif opcion_1 == 3:
             print("Saliendo de la aplicación.")
             salir = True
