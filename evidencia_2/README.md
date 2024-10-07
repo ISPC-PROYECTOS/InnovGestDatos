@@ -69,7 +69,7 @@ Las opciones que encontramos en el programa al momento de ejecutarlo son:
    -Regresa al menu inicial.
 
      
-3 **Iniciar Sesión**:
+3. **Iniciar Sesión**:
    - Regresa al menú principal y selecciona "INICIAR SESIÓN".
    - Ingresa el correo electrónico y la contraseña del usuario que agregaste.
    - Verifica que el inicio de sesión sea exitoso.
