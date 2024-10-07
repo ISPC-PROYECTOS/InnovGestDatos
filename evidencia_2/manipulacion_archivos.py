@@ -1,50 +1,81 @@
-import pickle  
-from datetime import datetime  
+import pickle
+from usuario import Usuario
 
-# Función para guardar los datos en un archivo binario  
-def guardar_datos(usuario, contrasena):
-    if not usuario or not contrasena:
-        print("Usuario y contraseña no pueden estar vacíos.")
-        return
-
-    datos = {
-        'usuario': usuario,
-        'contrasena': contrasena,
-        'fecha_hora': datetime.now()
-    }
-
+# Función para guardar usuario
+def guardar_usuario(usuario):
     try:
-        with open('datos_usuario.bin', 'ab') as archivo:
-            pickle.dump(datos, archivo)
+        with open('usuarios.ispc', 'ab') as archivo:
+            pickle.dump(usuario, archivo)
         print("Datos guardados exitosamente.")
     except Exception as e:
-        print(f"Error al guardar los datos: {e}")  
-# Función para mostrar los datos guardados  
-def mostrar_datos():  
-    try:  
-        with open('datos_usuario.bin', 'rb') as archivo:  
-            while True:  
-                try:  
-                    # Leer un objeto del archivo  
-                    datos = pickle.load(archivo)  
-                    print(f"Usuario: {datos['usuario']}, Contraseña: {datos['contrasena']}, Fecha y Hora: {datos['fecha_hora']}")  
-                except EOFError:  
-                    # Cuando se alcanza el final del archivo, terminamos  
-                    break  
-    except FileNotFoundError:  
-        print("No se ha encontrado el archivo de datos.")  
+        print(f"Error al guardar los datos: {e}")
 
-# Solicitar el usuario y la contraseña  
-if __name__ == "__main__":
-    usuario = input("Ingresa tu usuario: ")
-    contrasena = input("Ingresa tu contraseña: ")
+# Función para mostrar los datos guardados
+def mostrar_datos():
+    try:
+        with open('usuarios.ispc', 'rb') as archivo:
+            while True:
+                try:
+                    usuario = pickle.load(archivo)
+                    if isinstance(usuario, Usuario):
+                        print(f"DNI: {usuario.get_dni()}, Usuario: {usuario.get_username()}, Email: {usuario.get_email()}")
+                    else:
+                        print("Objeto no es una instancia de Usuario")
+                except EOFError:
+                    # Cuando se alcanza el final del archivo, terminamos
+                    break
+    except FileNotFoundError:
+        print("No se ha encontrado el archivo de datos.")
+    except Exception as e:
+        print(f"Error al cargar los datos: {e}")
 
-# Llamar a la función para guardar los datos  
-guardar_datos(usuario, contrasena)  
+# Función para cargar los datos desde un archivo binario
+def cargar_datos():
+    usuarios = []
+    try:
+        with open('usuarios.ispc', 'rb') as archivo:
+            while True:
+                try:
+                    usuario = pickle.load(archivo)
+                    if isinstance(usuario, Usuario):
+                        usuarios.append(usuario)
+                    else:
+                        print("Objeto no es una instancia de Usuario")
+                except EOFError:
+                    break
+    except FileNotFoundError:
+        print("El archivo 'usuarios.ispc' no existe.")
+    except Exception as e:
+        print(f"Error al cargar los datos: {e}")
+    return usuarios
 
-print("Datos guardados exitosamente.") 
-mostrar_datos()
+# Función para guardar todos los usuarios en un archivo binario
+def guardar_todos_los_usuarios(usuarios):
+    try:
+        with open('usuarios.ispc', 'wb') as archivo:
+            for usuario in usuarios:
+                if isinstance(usuario, Usuario):
+                    pickle.dump(usuario, archivo)
+                else:
+                    print("Objeto no es una instancia de Usuario")
+        print("Todos los datos guardados exitosamente.")
+    except Exception as e:
+        print(f"Error al guardar los datos: {e}")
 
-
-    
-  
+# Función para verificar usuarios
+def verificar_usuarios():
+    usuarios = []
+    try:
+        with open('usuarios.ispc', 'rb') as file:
+            while True:
+                try:
+                    usuario = pickle.load(file)
+                    if isinstance(usuario, Usuario):
+                        usuarios.append(usuario)
+                    else:
+                        print("Objeto no es una instancia de Usuario")
+                except EOFError:
+                    break
+    except FileNotFoundError:
+        print("El archivo usuarios.ispc no existe.")
+    return usuarios

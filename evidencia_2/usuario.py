@@ -28,6 +28,3 @@ class Usuario:
 
     def mostrar_datos(self):
         return f"DNI: {self.__dni}, Usuario: {self.__username}, Email: {self.__email}"
-
-
-    
