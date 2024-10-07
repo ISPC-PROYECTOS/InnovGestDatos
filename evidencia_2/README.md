@@ -38,7 +38,6 @@ Las opciones que encontramos en el programa al momento de ejecutarlo son:
 2. Al elegir la opción CRUD , se accede a las siguientes opciones:
 
 2.a **Agregar un Usuario**:
-   - Selecciona la opción correspondiente para acceder al menú CRUD.
    - Escoge "AGREGAR USUARIO" e ingresa la información requerida:
      - DNI: Un número de identificación de 7 u 8 dígitos.
      - Nombre de usuario: Solo letras, en minúsculas.
@@ -46,27 +45,27 @@ Las opciones que encontramos en el programa al momento de ejecutarlo son:
      - Contraseña: Mínimo 8 caracteres, que contenga letras y números.
    - Confirma que el usuario se haya agregado exitosamente.
 
-2.b**Modificar un Usuario**:
+2.b **Modificar un Usuario**:
    - Desde el menú CRUD, selecciona "MODIFICAR USUARIO".
    - Ingresa el DNI del usuario que deseas modificar.
    - Proporciona la nueva información (nombre de usuario, correo electrónico, contraseña).
    - Aparece un mensaje que confirma que la modificación fue exitosa.
      
-2.c**Eliminar un Usuario**:
+2.c **Eliminar un Usuario**:
    - En el menú CRUD, selecciona "ELIMINAR USUARIO".
    - Ingresa el DNI del usuario que deseas eliminar.
    - Si la eliminación fue correcta se recibe un mensaje que confirma que el usuario ha sido eliminado correctamente.
 
-2.d**Buscar un Usuario**:
+2.d **Buscar un Usuario**:
    - Selecciona "BUSCAR USUARIO" en el menú CRUD.
    - Ingresa el DNI del usuario que deseas buscar.
    - Una vez realizada la busqueda el programa muestra la información del usuario.
      
-2.e**Mostrar un Usuario**:
+2.e **Mostrar un Usuario**:
    - Selecciona "MOSTRAR USUARIO" en el menú CRUD.
    - Se despliega el listado de usuarios ingresados.
 
-2.f**Volver al menu principal**:
+2.f **Volver al menu principal**:
    -Regresa al menu inicial.
 
      
@@ -75,7 +74,7 @@ Las opciones que encontramos en el programa al momento de ejecutarlo son:
    - Ingresa el correo electrónico y la contraseña del usuario que agregaste.
    - Verifica que el inicio de sesión sea exitoso.
 
-8. **Cerrar el Programa**:
+4. **Cerrar el Programa**:
    - Selecciona la opción "SALIR" del menú principal para cerrar el programa.
 
 ## Resultados Esperados
