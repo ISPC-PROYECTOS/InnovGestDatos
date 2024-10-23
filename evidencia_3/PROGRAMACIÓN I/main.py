@@ -1,6 +1,7 @@
 from modulos_main import menu_pricipal, menu_crud
 from funciones_main import agregar_usuario, modificar_usuario,eliminar_usuario, buscar_usuario, mostrar_usuarios, ordenar_usuarios_burbuja, ordenar_usuarios_sort
 from inicio_sesion import iniciar_sesion
+from registros_pluviales import menu_registros_pluviales
 
 def main():
     salir = False
@@ -27,6 +28,8 @@ def main():
                 elif opcion_2 == 7:
                     ordenar_usuarios_sort()
                 elif opcion_2 == 8:
+                    menu_registros_pluviales()
+                elif opcion_2 == 9:
                     break
                 else:
                     print('Opción incorrecta, volvé a ingresarla.')

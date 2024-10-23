@@ -100,25 +100,26 @@ def ordenar_usuarios_sort():
     usuarios_ordenados = sorted(usuarios, key=lambda x: x.get_username())
     guardar_todos_los_usuarios(usuarios_ordenados)  
     return usuarios_ordenados
-def buscar_usuario_secuencial(dni, usuarios):
+
+def buscar_usuario_secuencial(username, usuarios):
     for usuario in usuarios:
-        if usuario.get_dni() == dni:
+        if usuario.get_username() == username:
             print(f"Usuario encontrado: {usuario.mostrar_datos()}")
             print("La búsqueda se realizó utilizando la técnica de búsqueda secuencial.")
             return usuario
     print("Usuario no encontrado.")
     return None
 
-def buscar_usuario_binaria(dni, usuarios):
+def buscar_usuario_binaria(username, usuarios):
     inicio = 0
     fin = len(usuarios) - 1
     while inicio <= fin:
         medio = (inicio + fin) // 2
-        if usuarios[medio].get_dni() == dni:
+        if usuarios[medio].get_username() == username:
             print(f"Usuario encontrado: {usuarios[medio].mostrar_datos()}")
             print("La búsqueda se realizó utilizando la técnica de búsqueda binaria.")
             return usuarios[medio]
-        elif usuarios[medio].get_dni() < dni:
+        elif usuarios[medio].get_username() < username:
             inicio = medio + 1
         else:
             fin = medio - 1
@@ -130,22 +131,18 @@ def buscar_usuario():
     if not usuarios:
         print("No hay usuarios registrados.")
         return
-
-    usuario_a_buscar = input("Ingrese el DNI del usuario a buscar: ")
-    if not validar_dni(usuario_a_buscar):
-        print("DNI no válido.")
+    usuario_a_buscar = input("Ingrese el nombre de usuario a buscar: ")
+    if not validar_usuario(usuario_a_buscar):  # Si tienes una función para validar el nombre de usuario
+        print("Nombre de usuario no válido.")
         return
-
     print("Seleccione el tipo de búsqueda:")
     print("1. Búsqueda Secuencial")
-    print("2. Búsqueda Binaria (requiere que los usuarios estén ordenados)")
-    
+    print("2. Búsqueda Binaria (requiere que los usuarios estén ordenados por username)")
     opcion = input("Ingrese su elección (1 o 2): ")
-    
     if opcion == "1":
         buscar_usuario_secuencial(usuario_a_buscar, usuarios)
     elif opcion == "2":
-        usuarios.sort(key=lambda u: u.get_dni())
+        usuarios.sort(key=lambda u: u.get_username())
         buscar_usuario_binaria(usuario_a_buscar, usuarios)
     else:
         print("Opción no válida.")

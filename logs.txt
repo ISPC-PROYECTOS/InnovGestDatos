@@ -1,0 +1,2 @@
+[2024-10-23 11:35:23.535337] Intento fallido: Contraseña incorrecta para el usuario susi@gmail.com
+[2024-10-23 11:35:43.498150] Intento fallido: Usuario no encontrado con el email susi@gmial.com
