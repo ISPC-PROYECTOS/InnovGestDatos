@@ -10,6 +10,6 @@ def menu_crud():
     print('3. ELIMINAR USUARIO')
     print('4. BUSCAR USUARIO')
     print('5. MOSTRAR USUARIOS')
-    print ('6. ORDENAR USUARIOS POR METODO BURBUJA')
-    print ('7. ORDENAR USUARIOS POR SORT')
+    print ('6. ORDENAR USUARIOS POR METODO BURBUJA - Se deben agregar usuarios antes de ordenar')
+    print ('7. ORDENAR USUARIOS POR SORT - Se deben agregar usuarios antes de ordenar')
     print('8. VOLVER AL MENÚ PRINCIPAL')

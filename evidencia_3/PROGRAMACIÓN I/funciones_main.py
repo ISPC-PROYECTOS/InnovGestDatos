@@ -100,3 +100,18 @@ def mostrar_usuarios():
         return
     for usuario in usuarios:
         print(f"DNI: {usuario.get_dni()}, Usuario: {usuario.get_username()}, Email: {usuario.get_email()}\n")
+
+def ordenar_usuarios_burbuja():
+    usuarios = cargar_datos()  
+    for i in range(len(usuarios)):
+        for j in range(0, len(usuarios)-i-1):
+            if usuarios[j].get_username() > usuarios[j+1].get_username():
+                usuarios[j], usuarios[j+1] = usuarios[j+1], usuarios[j]
+    guardar_todos_los_usuarios(usuarios)  
+    return usuarios
+
+def ordenar_usuarios_sort():
+    usuarios = cargar_datos()  
+    usuarios_ordenados = sorted(usuarios, key=lambda x: x.get_username())
+    guardar_todos_los_usuarios(usuarios_ordenados)  
+    return usuarios_ordenados

@@ -1,6 +1,5 @@
 from modulos_main import menu_pricipal, menu_crud
-from funciones_main import agregar_usuario, modificar_usuario,eliminar_usuario, buscar_usuario, mostrar_usuarios,
-ordenar_usuarios_burbuja, ordenar_usuarios_sort
+from funciones_main import agregar_usuario, modificar_usuario,eliminar_usuario, buscar_usuario, mostrar_usuarios, ordenar_usuarios_burbuja, ordenar_usuarios_sort
 from inicio_sesion import iniciar_sesion
 
 def main():

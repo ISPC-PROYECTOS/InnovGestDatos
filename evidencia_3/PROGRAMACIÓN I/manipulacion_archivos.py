@@ -63,7 +63,7 @@ def guardar_todos_los_usuarios(usuarios):
     except Exception as e:
         print(f"Error al guardar los datos: {e}")
 
-# Función para verificar usuarios
+
 def verificar_usuarios():
     usuarios = []
     try:
@@ -81,7 +81,12 @@ def verificar_usuarios():
         print("El archivo usuarios.ispc no existe.")
     return usuarios
 
-# Función para registrar intentos fallidos en logs.txt
+def guardar_usuarios_ordenados(usuarios, filename='usuarios.ispc'):
+    with open(filename, 'w') as file:
+        for usuario in usuarios:
+            file.write(f"{usuario['usuario']}\n")
+
+
 def registrar_fallo(mensaje):
     with open('logs.txt', 'a') as log_file:
         fecha_hora = datetime.datetime.now()
