@@ -1,5 +1,6 @@
 import pickle
 from usuario import Usuario
+import datetime
 
 # Función para guardar usuario
 def guardar_usuario(usuario):
@@ -79,3 +80,9 @@ def verificar_usuarios():
     except FileNotFoundError:
         print("El archivo usuarios.ispc no existe.")
     return usuarios
+
+# Función para registrar intentos fallidos en logs.txt
+def registrar_fallo(mensaje):
+    with open('logs.txt', 'a') as log_file:
+        fecha_hora = datetime.datetime.now()
+        log_file.write(f"[{fecha_hora}] {mensaje}\n")

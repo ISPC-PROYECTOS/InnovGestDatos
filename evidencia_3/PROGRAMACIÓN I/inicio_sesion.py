@@ -1,5 +1,6 @@
 from manipulacion_archivos import verificar_usuarios
 from acceso import Acceso
+from manipulacion_archivos import registrar_fallo
 
 def iniciar_sesion():
     email = input("Ingrese su email: ")
@@ -16,9 +17,12 @@ def iniciar_sesion():
                     return acceso
                 else:
                     print("Contraseña incorrecta")
+                    registrar_fallo(f"Intento fallido: Contraseña incorrecta para el usuario {email}")
                     return None
         print("Usuario no encontrado")
+        registrar_fallo(f"Intento fallido: Usuario no encontrado con el email {email}")
         return None
     except Exception as e:
         print(f"Error durante el inicio de sesión: {e}")
+        registrar_fallo(f"Error durante el inicio de sesión: {e}")
         return None
