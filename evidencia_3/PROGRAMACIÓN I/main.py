@@ -25,8 +25,10 @@ def main():
                     mostrar_usuarios()
                 elif opcion_2 == 6:
                     ordenar_usuarios_burbuja()
+                    print("Se han ordenado los username por orden alfabetico a traves de metodo burbuja,elija opcion 5 para mostrar nuevo orden")
                 elif opcion_2 == 7:
                     ordenar_usuarios_sort()
+                    print("Se han ordenado los username por orden alfabetico a traves de metodo sort,elija opcion 5 para mostrar nuevo orden")
                 elif opcion_2 == 8:
                     menu_registros_pluviales()
                 elif opcion_2 == 9:
