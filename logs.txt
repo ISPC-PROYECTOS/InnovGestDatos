@@ -8,3 +8,11 @@
 [2024-10-29 13:00:32.778603] Intento fallido: Contraseña incorrecta para el usuario juan@gmail.com
 [2024-10-29 13:01:37.553072] Intento fallido: Contraseña incorrecta para el usuario vpicco@gmail.com
 [2024-10-29 13:01:48.657477] Intento fallido: Contraseña incorrecta para el usuario juan@gmail.com
+[2024-10-29 17:29:03.960548] Intento fallido: Usuario no encontrado con el email hebecpereyra@gmail.com
+[2024-10-29 17:30:21.297027] Intento fallido: Contraseña incorrecta para el usuario hebecpereyra@gmail.com
+[2024-10-29 17:30:45.075892] Intento fallido: Contraseña incorrecta para el usuario hebecpereyra@gmail.com
+[2024-10-29 17:32:29.723577] Intento fallido: Usuario no encontrado con el email p_hebe_c@hotmai.com
+[2024-10-29 17:35:43.280678] Intento fallido: Contraseña incorrecta para el usuario prueba@gmail.com
+[2024-10-29 17:47:04.418850] Intento fallido: Contraseña incorrecta para el usuario hebecpereyra@gmail.com
+[2024-10-29 18:42:00.847724] Intento fallido: Usuario no encontrado con el email usuariodos@gmail.com
+[2024-10-29 19:06:00.140249] Intento fallido: Contraseña incorrecta para el usuario usuariodeprueba@gmail.com
