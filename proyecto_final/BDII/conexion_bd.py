@@ -1,5 +1,3 @@
-
-#------------------------------------prueba raice------------------------
 import mysql.connector
 from mysql.connector import Error
 
@@ -21,13 +19,13 @@ def conectar_base_datos():
         )
         if conn.is_connected():
             print("Conexión a la base de datos exitosa.")
-            return conn
+            cursor = conn.cursor()
+            return conn, cursor
     except Error as e:
         raise ErrorConexion(f"Error al conectar a la base de datos: {e}")
 
-def cerrar_conexion(conn):
+def cerrar_conexion(conn, cursor):
     if conn.is_connected():
-        conn.cursor().close()
+        cursor.close()
         conn.close()
         print("Conexión a la base de datos cerrada.")
-

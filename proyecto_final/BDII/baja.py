@@ -1,8 +1,7 @@
-from .conexion_bd import cursor, conn
+from .conexion_bd import conectar_base_datos, cerrar_conexion
 from .mostrar_tablas import mostrar_productos_granel_disponibles, mostrar_productos_fraccionados_disponibles, mostrar_proveedores
 
 def baja():
-
     salir = False
     while not salir:
         print('Ingresa la opción que desea dar de BAJA:')
@@ -31,24 +30,41 @@ def baja():
         else:
             print('\nOpción incorrecta\n')
 
-
 def baja_producto():
-    query = "DELETE FROM productosgranel WHERE idproductogranel = %s"
-    id = int(input('Ingresa el ID del producto a GRANEL que queres dar de BAJA: '))
-    values = (id,)
-    cursor.execute(query, values)
-    conn.commit() 
+    conn, cursor = conectar_base_datos()
+    if conn:
+        cursor = conn.cursor()
+        try:
+            query = "DELETE FROM productosgranel WHERE idproductogranel = %s"
+            id_producto = int(input('Ingresa el ID del producto a GRANEL que quieres dar de BAJA: '))
+            values = (id_producto,)
+            cursor.execute(query, values)
+            conn.commit()
+        except Exception as e:
+            print(f"Error al dar de baja el producto: {e}")
 
 def baja_presentacion():
-    query = "DELETE FROM presentaciones WHERE idproductofracc = %s"
-    id = int(input('Ingresa el ID del producto FRACCIONADO que queres dar de BAJA: '))
-    values = (id,)
-    cursor.execute(query, values)
-    conn.commit() 
-    
+    conn, cursor = conectar_base_datos()
+    if conn:
+        cursor = conn.cursor()
+        try:
+            query = "DELETE FROM presentaciones WHERE idproductofracc = %s"
+            id_presentacion = int(input('Ingresa el ID del producto FRACCIONADO que quieres dar de BAJA: '))
+            values = (id_presentacion,)
+            cursor.execute(query, values)
+            conn.commit()
+        except Exception as e:
+            print(f"Error al dar de baja la presentación: {e}")
+
 def baja_proveedor():
-    CUIT = input('Ingresa el CUIT del proveedor que queres dar de BAJA: ')
-    query = "DELETE FROM proveedores WHERE CUIT = %s"
-    values = (CUIT,)
-    cursor.execute(query, values)
-    conn.commit() 
+    conn, cursor = conectar_base_datos()
+    if conn:
+        cursor = conn.cursor()
+        try:
+            CUIT = input('Ingresa el CUIT del proveedor que quieres dar de BAJA: ')
+            query = "DELETE FROM proveedores WHERE CUIT = %s"
+            values = (CUIT,)
+            cursor.execute(query, values)
+            conn.commit()
+        except Exception as e:
+            print(f"Error al dar de baja el proveedor: {e}")

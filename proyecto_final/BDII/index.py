@@ -3,7 +3,7 @@ from .alta import alta
 from .baja import baja
 from .consultar_stock import consultar_stock
 from .modificar import modificar
-from .registro_venta import registro_venta_actulizacion_stock
+from .registro_venta import registro_venta_actualizacion_stock
 
 
 def menu_stock_granel():
@@ -23,7 +23,7 @@ def menu_stock_granel():
 
         opcion = int(input("Ingrese una opción: "))
         if opcion == 1:
-            registro_venta_actulizacion_stock()
+            registro_venta_actualizacion_stock()
         elif opcion == 2:
             consultar_stock()
         elif opcion == 3:

@@ -22,12 +22,12 @@ def main():
         elif opcion == '2':
             try:
                 sesion_iniciada = iniciar_sesion()
-                conn = conectar_base_datos()
+                conn, cursor = conectar_base_datos()
                 
                 if sesion_iniciada is True:
                     from BDII import index
                     index.menu_stock_granel()
-                cerrar_conexion(conn)
+                cerrar_conexion(conn, cursor)
             except ErrorConexion as e:
                 print(e)
                 print("Por favor, configure los datos de conexión y pruebe nuevamente.")
