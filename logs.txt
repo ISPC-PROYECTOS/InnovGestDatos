@@ -16,3 +16,6 @@
 [2024-10-29 17:47:04.418850] Intento fallido: Contraseña incorrecta para el usuario hebecpereyra@gmail.com
 [2024-10-29 18:42:00.847724] Intento fallido: Usuario no encontrado con el email usuariodos@gmail.com
 [2024-10-29 19:06:00.140249] Intento fallido: Contraseña incorrecta para el usuario usuariodeprueba@gmail.com
+[2024-10-30 08:06:42.620156] Intento fallido: Usuario no encontrado con el email usuarioprueba@gmail.com
+[2024-10-30 09:20:20.551058] Intento fallido: Usuario no encontrado con el email usuariopruueba2@gmail.com
+[2024-10-30 09:21:11.178472] Intento fallido: Contraseña incorrecta para el usuario usuarioprueba2@gmail.com
