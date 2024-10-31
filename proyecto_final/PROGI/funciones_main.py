@@ -78,6 +78,7 @@ def eliminar_usuario():
     else:
         guardar_todos_los_usuarios(usuarios_actualizados)
         print("Usuario eliminado exitosamente.")
+        
 def mostrar_usuarios():
     usuarios = cargar_datos()
     if not usuarios:

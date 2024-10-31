@@ -3,7 +3,7 @@ from mysql.connector import Error
 
 HOST = "localhost"
 USER = "root"
-PASSWORD = "su_contraseña"
+PASSWORD = "vicki1996"
 BD = "stockagranel"
 
 class ErrorConexion(Exception):

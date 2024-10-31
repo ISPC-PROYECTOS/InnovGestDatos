@@ -10,10 +10,11 @@ def generar_registros_aleatorios():
 
     for dias in dias_por_mes:
         mes_registros = [random.randint(0, 500) for _ in range(dias)]
-        mes_registros += [None] * (31 - dias)
+        mes_registros += [0] * (31 - dias)
         registros.append(mes_registros)
 
     return registros
+
 
 def cargar_registros_pluviales():
     año = input("Ingrese el año para cargar los registros pluviales: ")
@@ -28,8 +29,8 @@ def cargar_registros_pluviales():
         print(f"No se encontró el archivo. Generando registros aleatorios para el año {año}.")
         registros = generar_registros_aleatorios()
         guardar_en_csv(registros, año, carpeta)
-        datos = pd.DataFrame(registros)
-
+        datos = pd.DataFrame({f'Mes {i+1}': registros[i] for i in range(len(registros))})
+    
     return datos, año
 
 def guardar_en_csv(registros, año, carpeta):
@@ -120,11 +121,8 @@ def menu_registros_pluviales():
             generar_grafico_circular(datos, año)
 
         elif opcion == "5":
-            print("Saliendo de refistros pluviales.")
+            print("Saliendo de registros pluviales.")
             salir = True
 
         else:
             print("Opción no válida. Intente de nuevo.")
-
-if __name__ == '__main__':
-    menu_registros_pluviales()

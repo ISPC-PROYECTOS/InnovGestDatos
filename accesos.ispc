@@ -32,3 +32,6 @@
 {"id_acceso": 1730306708.582927, "email": "vicki@gmail.com", "fecha_ingreso": "2024-10-30T13:45:08.582927"}
 {"id_acceso": 1730306911.96582, "email": "vicki@gmail.com", "fecha_ingreso": "2024-10-30T13:48:31.965820"}
 {"id_acceso": 1730307056.672938, "email": "vicki@gmail.com", "fecha_ingreso": "2024-10-30T13:50:56.672938"}
+{"id_acceso": 1730390591.041518, "email": "vicki@gmail.com", "fecha_ingreso": "2024-10-31T13:03:11.041518"}
+{"id_acceso": 1730390622.632093, "email": "vicki@gmail.com", "fecha_ingreso": "2024-10-31T13:03:42.632093"}
+{"id_acceso": 1730390659.13735, "email": "vicki@gmail.com", "fecha_ingreso": "2024-10-31T13:04:19.137350"}

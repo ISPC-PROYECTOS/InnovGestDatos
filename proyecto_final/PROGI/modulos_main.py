@@ -1,4 +1,4 @@
-from funciones_main import agregar_usuario, modificar_usuario,eliminar_usuario, buscar_usuario, mostrar_usuarios, ordenar_usuarios_burbuja, ordenar_usuarios_sort
+from funciones_main import agregar_usuario, modificar_usuario,eliminar_usuario, buscar_usuario, mostrar_usuarios, ordenar_usuarios_burbuja
 
 def menu_usuarios():
     salir = False
@@ -61,10 +61,10 @@ def menu_accesos():
         opcion = input("Seleccione una opción: ")
         
         if opcion == '1':
-            # Mostrar accesos.ispc
+            # Mostrar accesos.ispc FALTA HACERLO
             pass
         elif opcion == '2':
-            # Mostrar logs.txt
+            # Mostrar logs.txt FALTA HACERLO
             pass
         elif opcion == '3':
             salir = True
@@ -82,8 +82,7 @@ def ordenamiento_busqueda():
         opcion = input("Seleccione una opción: ")
         
         if opcion == '1':
-            # Agregar función de ordenamiento
-            pass
+            ordenar_usuarios_burbuja()
         elif opcion == '2':
             buscar_mostrar()
         elif opcion == '3':
@@ -105,17 +104,15 @@ def buscar_mostrar():
         opcion = input("Seleccione una opción: ")
         
         if opcion == '1':
-            # Búsqueda por DNI
+            # Búsqueda por DNI FALTA HACERLO
             pass
         elif opcion == '2':
-            # Búsqueda por username
-            pass
+            buscar_usuario()
         elif opcion == '3':
-            # Búsqueda por email
+            # Búsqueda por email FALTA HACERLO
             pass
         elif opcion == '4':
-            # Mostrar todos los usuarios
-            pass
+            mostrar_usuarios()
         elif opcion == '5':
             salir = True
         else:
