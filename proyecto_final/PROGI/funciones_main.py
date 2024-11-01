@@ -147,3 +147,25 @@ def buscar_usuario():
         buscar_usuario_binaria(usuario_a_buscar, usuarios)
     else:
         print("Opción no válida.")
+        
+def mostrar_datos_accesos():
+    """Función para mostrar el contenido del archivo accesos.ispc."""
+    try:
+        with open('accesos.ispc', 'r') as archivo:
+            datos = archivo.readlines()
+            print("\n-----> DATOS DE ACCESOS <-----")
+            for linea in datos:
+                print(linea.strip())
+    except FileNotFoundError:
+        print("El archivo accesos.ispc no se encontró.")
+
+def mostrar_intentos_fallidos():
+    """Función para mostrar el contenido del archivo logs.txt."""
+    try:
+        with open('logs.txt', 'r') as archivo:
+            logs = archivo.readlines()
+            print("\n-----> LOGS DE INTENTOS FALLIDOS <-----")
+            for log in logs:
+                print(log.strip())
+    except FileNotFoundError:
+        print("El archivo logs.txt no se encontró.")

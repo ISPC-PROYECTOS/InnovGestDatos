@@ -1,4 +1,4 @@
-from funciones_main import agregar_usuario, modificar_usuario,eliminar_usuario, buscar_usuario, mostrar_usuarios, ordenar_usuarios_burbuja
+from funciones_main import agregar_usuario, modificar_usuario,eliminar_usuario, buscar_usuario, mostrar_usuarios, ordenar_usuarios_burbuja, mostrar_datos_accesos, mostrar_intentos_fallidos 
 
 def menu_usuarios():
     salir = False
@@ -48,8 +48,30 @@ def menu_crud():
             salir = True
         else:
             print("Opción no válida, intente nuevamente.")
-    
+            
+
 def menu_accesos():
+    salir = False
+
+    while not salir:
+        print('-----> MENÚ ACCESOS <-----')
+        print('1. MOSTRAR ACCESOS')
+        print('2. MOSTRAR INTENTOS FALLIDOS')
+        print('3. SALIR')
+
+        opcion = input("Seleccione una opción: ")
+        
+        if opcion == '1':
+            mostrar_datos_accesos()  # Llama a la función para mostrar accesos
+        elif opcion == '2':
+            mostrar_intentos_fallidos()  # Llama a la función para mostrar intentos fallidos
+        elif opcion == '3':
+            salir = True
+            print("Volviendo al menú anterior...")
+        else:
+            print("Opción no válida, intente nuevamente.")
+    
+'''def menu_accesos():
     salir = False
 
     while not salir:
@@ -69,7 +91,7 @@ def menu_accesos():
         elif opcion == '3':
             salir = True
         else:
-            print("Opción no válida, intente nuevamente.")
+            print("Opción no válida, intente nuevamente.")'''
 
 def ordenamiento_busqueda():
     salir = False
