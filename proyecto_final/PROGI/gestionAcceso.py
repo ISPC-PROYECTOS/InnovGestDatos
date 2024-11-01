@@ -44,4 +44,9 @@ class Acceso:
 
     def __str__(self):
         return(f"Identificacion de Acceso : {self.id_acceso}, Usuario: {self.get_usuarioLogueado()}, "
-                f"Ingreso: {self.fecha_ingreso}, Salida: {self.fecha_salida}") 
+                f"Ingreso: {self.fecha_ingreso}, Salida: {self.fecha_salida}")
+    
+    def registrar_fallo(mensaje):
+        with open('logs.txt', 'a') as log_file:
+            fecha_hora = datetime.now()
+            log_file.write(f"[{fecha_hora}] {mensaje}\n")

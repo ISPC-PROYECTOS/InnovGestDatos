@@ -86,7 +86,4 @@ def guardar_usuarios_ordenados(usuarios, filename='usuarios.ispc'):
         for usuario in usuarios:
             file.write(f"{usuario['usuario']}\n")
 
-def registrar_fallo(mensaje):
-    with open('logs.txt', 'a') as log_file:
-        fecha_hora = datetime.datetime.now()
-        log_file.write(f"[{fecha_hora}] {mensaje}\n")
+

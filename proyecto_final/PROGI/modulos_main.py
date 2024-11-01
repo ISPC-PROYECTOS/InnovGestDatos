@@ -112,7 +112,7 @@ def buscar_mostrar():
             email_buscar = input("Ingrese el email a buscar: ")
             buscar_por_email(email_buscar)  
         elif opcion == '4':
-            mostrar_usuarios()  
+            mostrar_usuarios()
         elif opcion == '5':
             salir = True
         else:
