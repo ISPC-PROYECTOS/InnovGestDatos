@@ -133,7 +133,7 @@ def buscar_usuario():
         print("No hay usuarios registrados.")
         return
     usuario_a_buscar = input("Ingrese el nombre de usuario a buscar: ")
-    if not validar_usuario(usuario_a_buscar):  # Si tienes una función para validar el nombre de usuario
+    if not validar_usuario(usuario_a_buscar):  
         print("Nombre de usuario no válido.")
         return
     print("Seleccione el tipo de búsqueda:")
@@ -147,7 +147,6 @@ def buscar_usuario():
         buscar_usuario_binaria(usuario_a_buscar, usuarios)
     else:
         print("Opción no válida.")
-        
 def mostrar_datos_accesos():
     try:
         with open('accesos.ispc', 'r') as archivo:
@@ -167,3 +166,20 @@ def mostrar_intentos_fallidos():
                 print(log.strip())
     except FileNotFoundError:
         print("El archivo logs.txt no se encontró.")
+        
+def buscar_por_dni(dni_buscar):
+    usuarios = cargar_datos()  
+    for usuario in usuarios:
+        if usuario.get_dni() == dni_buscar:
+            print("Usuario encontrado:", usuario.mostrar_datos())
+            return
+    print("No se encontró el usuario con el DNI ingresado.")
+
+def buscar_por_email(email_buscar):
+    usuarios = cargar_datos()  
+    for usuario in usuarios:
+        if usuario.get_email() == email_buscar:
+            print("Usuario encontrado:", usuario.mostrar_datos())
+            return
+    print("No se encontró el usuario con el email ingresado.")
+

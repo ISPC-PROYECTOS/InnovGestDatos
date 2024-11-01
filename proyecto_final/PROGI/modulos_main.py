@@ -1,4 +1,4 @@
-from funciones_main import agregar_usuario, modificar_usuario,eliminar_usuario, buscar_usuario, mostrar_usuarios, ordenar_usuarios_burbuja, mostrar_datos_accesos, mostrar_intentos_fallidos 
+from funciones_main import agregar_usuario, modificar_usuario,eliminar_usuario, buscar_usuario, mostrar_usuarios, ordenar_usuarios_burbuja, mostrar_datos_accesos, mostrar_intentos_fallidos, buscar_por_dni, buscar_por_email 
 
 def menu_usuarios():
     salir = False
@@ -62,43 +62,22 @@ def menu_accesos():
         opcion = input("Seleccione una opción: ")
         
         if opcion == '1':
-            mostrar_datos_accesos()  # Llama a la función para mostrar accesos
+            mostrar_datos_accesos()  
         elif opcion == '2':
-            mostrar_intentos_fallidos()  # Llama a la función para mostrar intentos fallidos
+            mostrar_intentos_fallidos()  
         elif opcion == '3':
             salir = True
             print("Volviendo al menú anterior...")
         else:
             print("Opción no válida, intente nuevamente.")
-    
-'''def menu_accesos():
-    salir = False
 
-    while not salir:
-        print('-----> MENÚ ACCESOS <-----')
-        print('1. MOSTRAR ACCESOS')
-        print('2. MOSTRAR INTENTOS FALLIDOS')
-        print('3. SALIR')
-
-        opcion = input("Seleccione una opción: ")
-        
-        if opcion == '1':
-            # Mostrar accesos.ispc FALTA HACERLO
-            pass
-        elif opcion == '2':
-            # Mostrar logs.txt FALTA HACERLO
-            pass
-        elif opcion == '3':
-            salir = True
-        else:
-            print("Opción no válida, intente nuevamente.")'''
 
 def ordenamiento_busqueda():
     salir = False
 
     while not salir:
         print('1. ORDENAR USUARIOS')
-        print('2. BUSCAR Y MOSTRAR USUARIOS') #buscar_mostrar
+        print('2. BUSCAR Y MOSTRAR USUARIOS') 
         print('3. SALIR')
     
         opcion = input("Seleccione una opción: ")
@@ -112,7 +91,6 @@ def ordenamiento_busqueda():
         else:
             print("Opción no válida, intente nuevamente.")
 
-
 def buscar_mostrar():
     salir = False
 
@@ -120,22 +98,25 @@ def buscar_mostrar():
         print('1. BÚSQUEDA POR DNI')
         print('2. BÚSQUEDA POR USERNAME')
         print('3. BÚSQUEDA POR EMAIL')
-        print('4. MOSTRAR USUARIOS') #DOS OPCIONES
+        print('4. MOSTRAR USUARIOS') 
         print('5. SALIR')
 
         opcion = input("Seleccione una opción: ")
         
         if opcion == '1':
-            # Búsqueda por DNI FALTA HACERLO
-            pass
+            dni_buscar = input("Ingrese el DNI a buscar: ")
+            buscar_por_dni(dni_buscar)  # Llama a la función que implementa la búsqueda por DNI
         elif opcion == '2':
-            buscar_usuario()
+            buscar_usuario()  # Esta función ya está implementada y usa cargar_datos()
         elif opcion == '3':
-            # Búsqueda por email FALTA HACERLO
-            pass
+            email_buscar = input("Ingrese el email a buscar: ")
+            buscar_por_email(email_buscar)  # Llama a la función que implementa la búsqueda por email
         elif opcion == '4':
-            mostrar_usuarios()
+            mostrar_usuarios()  # Muestra todos los usuarios
         elif opcion == '5':
             salir = True
         else:
             print("Opción no válida, intente nuevamente.")
+
+
+
