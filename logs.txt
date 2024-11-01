@@ -21,3 +21,5 @@
 [2024-10-30 09:21:11.178472] Intento fallido: Contraseña incorrecta para el usuario usuarioprueba2@gmail.com
 [2024-10-30 11:29:34.547600] Intento fallido: Usuario no encontrado con el email vicki@gmail.com
 [2024-10-31 13:02:44.544498] Intento fallido: Usuario no encontrado con el email vicki@gmial.com
+[2024-11-01 14:55:08.442401] Intento fallido: Contraseña incorrecta para el usuario victoria@gmail.com
+[2024-11-01 14:55:28.885640] Intento fallido: Usuario no encontrado con el email vicki@gmail.com

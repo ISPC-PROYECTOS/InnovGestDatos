@@ -1,4 +1,3 @@
-#----------------------------------------------------prueba raice------------------------
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -11,8 +10,8 @@ def main():
     salir = False
     while not salir:
         print('-----> MENÚ PRINCIPAL <-----')
-        print('1. USUARIOS Y ACCESOS') #menu_usuarios
-        print('2. INICIAR SESIÓN') #menu_stock_granel
+        print('1. USUARIOS Y ACCESOS') 
+        print('2. INICIAR SESIÓN') 
         print('3. ANÁLISIS DE DATOS')
         print('4. SALIR')
         opcion = input("Seleccione una opción: ")

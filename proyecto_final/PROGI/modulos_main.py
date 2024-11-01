@@ -5,9 +5,9 @@ def menu_usuarios():
 
     while not salir:
         print('-----> MENÚ USUARIOS Y ACCESOS <-----')
-        print('1. CRUD') #menu_crud
-        print('2. MOSTRAR ACCESOS') #menu_accesos
-        print('3. ORDENAMIENTO Y BÚSQUEDA') #ordenamiento_busqueda
+        print('1. CRUD') 
+        print('2. MOSTRAR ACCESOS') 
+        print('3. ORDENAMIENTO Y BÚSQUEDA') 
         print('4. SALIR')
 
         opcion = input("Seleccione una opción: ")
@@ -105,14 +105,14 @@ def buscar_mostrar():
         
         if opcion == '1':
             dni_buscar = input("Ingrese el DNI a buscar: ")
-            buscar_por_dni(dni_buscar)  # Llama a la función que implementa la búsqueda por DNI
+            buscar_por_dni(dni_buscar) 
         elif opcion == '2':
-            buscar_usuario()  # Esta función ya está implementada y usa cargar_datos()
+            buscar_usuario()  
         elif opcion == '3':
             email_buscar = input("Ingrese el email a buscar: ")
-            buscar_por_email(email_buscar)  # Llama a la función que implementa la búsqueda por email
+            buscar_por_email(email_buscar)  
         elif opcion == '4':
-            mostrar_usuarios()  # Muestra todos los usuarios
+            mostrar_usuarios()  
         elif opcion == '5':
             salir = True
         else:

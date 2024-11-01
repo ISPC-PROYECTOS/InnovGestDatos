@@ -147,6 +147,7 @@ def buscar_usuario():
         buscar_usuario_binaria(usuario_a_buscar, usuarios)
     else:
         print("Opción no válida.")
+
 def mostrar_datos_accesos():
     try:
         with open('accesos.ispc', 'r') as archivo:
@@ -182,4 +183,3 @@ def buscar_por_email(email_buscar):
             print("Usuario encontrado:", usuario.mostrar_datos())
             return
     print("No se encontró el usuario con el email ingresado.")
-
