@@ -27,8 +27,9 @@ DNI: 39546009, Usuario: victoria, Email: victoria@gmail.com
 Contraseña: victoria123
 
 DNI: 25342899, Usuario: ulises, Email: ulises@gmail.com
- Contraseña: ulises123
-. 
+Contraseña: ulises123
+
+
 3) Podra navegar en el resto del menu sin iniciar sesion o conectarse a la BBDD.
 
 
