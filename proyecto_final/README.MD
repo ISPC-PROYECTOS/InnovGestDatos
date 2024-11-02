@@ -13,7 +13,7 @@ TODO EL SISTEMA SE EJECUTA EN :    < main.py >
 
 2) Para usar el menu de Stock-Agranel: 
 
-2A) Es necesario tener instalada la BBDD <"stockagranel"> y agregar su contraseña en conexion_bd.py (script BBDD en evidencia 2/Evidencia Inovación y Gestión de Datos, Base de datos SQL_.pdf )
+2A) Es necesario tener instalada la BBDD <"stockagranel"> y agregar su contraseña en conexion_bd.py (script BBDD en evidencia 2/ Base de datos II )
 
 2B) Es necesario INICIAR SESIÓN (opción 2 del menu principal): 
 
