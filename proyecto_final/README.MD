@@ -1,5 +1,6 @@
 PRESENTACIÓN DE TRABAJO FINAL
-En este trabajo se inegran las evidencias de las materias BBDD II y Programación I realizadas en el presente cuatrimestre.
+
+En este trabajo se integran las evidencias de las materias BBDD II y Programación I realizadas en el presente cuatrimestre.
 
 ¿Como navegar por el software Control de Stock Agranel?
 
